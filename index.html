@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceIt — Reunite Lost Items with Their Owners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- SVG Trace Line Container -->
+    <svg class="trace-line" aria-hidden="true"></svg>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                        <!-- Key + Infinity combined -->
+                        <circle cx="8" cy="12" r="3"/>
+                        <path d="M11 12 Q14 10 17 12 Q20 14 17 16 Q14 14 11 12"/>
+                        <line x1="8" y1="15" x2="8" y2="22"/>
+                        <circle cx="8" cy="22" r="1" fill="currentColor"/>
+                    </svg>
+                </div>
+                <span class="logo-text">TraceIt</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How it works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech-stack">Built with</a></li>
+                <li><a href="#get-app" class="cta-link">Get the app</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-headline">Reunite lost items with their owners</h1>
+            <p class="hero-subheading">TraceIt is a community-driven Lost & Found app powered by GPS location tagging, real-time chat, and the kindness of your community.</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-label">2-tap to report</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Live GPS tagging</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Real-time chat</span>
+                </div>
+            </div>
+
+            <div class="hero-ctas">
+                <button class="btn btn-primary">Download on Google Play</button>
+                <button class="btn btn-secondary">View on GitHub</button>
+            </div>
+        </div>
+
+        <div class="hero-mockups">
+            <div class="phone-mockup mockup-splash">
+                <div class="phone-frame">
+                    <div class="phone-screen splash-screen">
+                        <div class="splash-logo">
+                            <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="8" cy="12" r="3"/>
+                                <path d="M11 12 Q14 10 17 12 Q20 14 17 16 Q14 14 11 12"/>
+                                <line x1="8" y1="15" x2="8" y2="22"/>
+                                <circle cx="8" cy="22" r="1" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h2 class="splash-title">TraceIt</h2>
+                        <p class="splash-tagline">Find what matters</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phone-mockup mockup-feed">
+                <div class="phone-frame">
+                    <div class="phone-screen feed-screen">
+                        <div class="feed-header">
+                            <h3>Nearby</h3>
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="m21 21-4.35-4.35"/>
+                            </svg>
+                        </div>
+                        <div class="feed-search">
+                            <input type="text" placeholder="Search..." disabled>
+                        </div>
+                        <div class="feed-filters">
+                            <span class="filter-chip active">All</span>
+                            <span class="filter-chip">Lost</span>
+                            <span class="filter-chip">Found</span>
+                        </div>
+                        <div class="feed-grid">
+                            <div class="item-card">
+                                <div class="item-image lost-gradient"></div>
+                                <div class="item-badge lost">Lost</div>
+                                <p class="item-title">Keys</p>
+                                <p class="item-meta">2 min away</p>
+                            </div>
+                            <div class="item-card">
+                                <div class="item-image found-gradient"></div>
+                                <div class="item-badge found">Found</div>
+                                <p class="item-title">Phone</p>
+                                <p class="item-meta">5 min away</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <h2 class="section-title">How it works</h2>
+        <div class="journey-container">
+            <div class="journey-line"></div>
+            <div class="journey-steps">
+                <div class="journey-step reveal-item">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 12h8M12 8v8"/>
+                        </svg>
+                    </div>
+                    <h3>Open & check</h3>
+                    <p>Browse nearby lost & found items instantly</p>
+                </div>
+
+                <div class="journey-step reveal-item">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M2 12h20"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3>Report it</h3>
+                    <p>Tag location with GPS in just 2 taps</p>
+                </div>
+
+                <div class="journey-step reveal-item">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2z"/>
+                            <path d="M12 7v5l3 2"/>
+                        </svg>
+                    </div>
+                    <h3>Get matched</h3>
+                    <p>Receive notifications for potential matches</p>
+                </div>
+
+                <div class="journey-step reveal-item">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Chat it out</h3>
+                    <p>Real-time messaging with the community</p>
+                </div>
+
+                <div class="journey-step reveal-item">
+                    <div class="journey-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Mark resolved</h3>
+                    <p>Celebrate your successful reunions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">Features</h2>
+        <div class="features-grid">
+            <div class="feature-card reveal-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M8 12h8M12 8v8"/>
+                    </svg>
+                </div>
+                <h3>One-tap sign-in</h3>
+                <p>Firebase Auth with Google Sign-In — get started in seconds</p>
+            </div>
+
+            <div class="feature-card reveal-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="8" y1="6" x2="21" y2="6"/>
+                        <line x1="8" y1="12" x2="21" y2="12"/>
+                        <line x1="8" y1="18" x2="21" y2="18"/>
+                        <line x1="3" y1="6" x2="3.01" y2="6"/>
+                        <line x1="3" y1="12" x2="3.01" y2="12"/>
+                        <line x1="3" y1="18" x2="3.01" y2="18"/>
+                    </svg>
+                </div>
+                <h3>Smart feed</h3>
+                <p>Staggered Pinterest-style layout for beautiful browsing</p>
+            </div>
+
+            <div class="feature-card reveal-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                </div>
+                <h3>GPS auto-tagging</h3>
+                <p>Precise location data powers smart matching</p>
+            </div>
+
+            <div class="feature-card reveal-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <h3>Real-time chat</h3>
+                <p>Firebase Firestore powers instant messaging</p>
+            </div>
+
+            <div class="feature-card reveal-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <h3>Rich profiles</h3>
+                <p>Track active and resolved posts from your account</p>
+            </div>
+
+            <div class="feature-card reveal-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                </div>
+                <h3>Photo-first posts</h3>
+                <p>Glide-powered image loading for lightning-fast browsing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resolved Showcase Section -->
+    <section class="resolved-showcase">
+        <div class="showcase-content">
+            <h2>See reunions happen</h2>
+            <p>Every resolved item tells a story. Browse the success stories from our community and be inspired to help others find what matters.</p>
+        </div>
+
+        <div class="showcase-mockup">
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-screen resolved-screen">
+                        <div class="profile-header">
+                            <h3>Profile</h3>
+                        </div>
+                        <div class="profile-tabs">
+                            <span class="tab active">Resolved</span>
+                            <span class="tab">Active</span>
+                        </div>
+                        <div class="resolved-items">
+                            <div class="resolved-card">
+                                <div class="resolved-image found-gradient"></div>
+                                <div class="resolved-checkmark">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <p class="resolved-title">Wallet</p>
+                            </div>
+                            <div class="resolved-card">
+                                <div class="resolved-image lost-gradient"></div>
+                                <div class="resolved-checkmark">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <p class="resolved-title">AirPods</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack" id="tech-stack">
+        <h2 class="section-title">Built with</h2>
+        <div class="tech-grid">
+            <div class="tech-card reveal-item">
+                <div class="tech-icon">J</div>
+                <h4>Java 11</h4>
+                <p>Core app logic</p>
+            </div>
+            <div class="tech-card reveal-item">
+                <div class="tech-icon">M</div>
+                <h4>Material 3</h4>
+                <p>UI Design System</p>
+            </div>
+            <div class="tech-card reveal-item">
+                <div class="tech-icon">F</div>
+                <h4>Firebase Auth</h4>
+                <p>Authentication</p>
+            </div>
+            <div class="tech-card reveal-item">
+                <div class="tech-icon">F</div>
+                <h4>Firestore</h4>
+                <p>Real-time database</p>
+            </div>
+            <div class="tech-card reveal-item">
+                <div class="tech-icon">C</div>
+                <h4>Cloud Storage</h4>
+                <p>Media management</p>
+            </div>
+            <div class="tech-card reveal-item">
+                <div class="tech-icon">G</div>
+                <h4>GPS Services</h4>
+                <p>Location tagging</p>
+            </div>
+            <div class="tech-card reveal-item">
+                <div class="tech-icon">G</div>
+                <h4>Glide</h4>
+                <p>Image loading</p>
+            </div>
+            <div class="tech-card reveal-item">
+                <div class="tech-icon">A</div>
+                <h4>Analytics</h4>
+                <p>Usage insights</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="get-app">
+        <h2>Ready to help your community?</h2>
+        <p>Contribute to TraceIt on GitHub or download the app today</p>
+        <button class="btn btn-primary btn-large">View GitHub Repository</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="8" cy="12" r="3"/>
+                        <path d="M11 12 Q14 10 17 12 Q20 14 17 16 Q14 14 11 12"/>
+                        <line x1="8" y1="15" x2="8" y2="22"/>
+                        <circle cx="8" cy="22" r="1" fill="currentColor"/>
+                    </svg>
+                </div>
+                <span>TraceIt</span>
+            </div>
+            <p class="footer-tagline">Find what matters. Help others reunite with theirs.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
