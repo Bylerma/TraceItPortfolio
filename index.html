@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TraceIt — Lost something? Found something? Trace it back.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TraceIt — Lost something? Found something? Trace it back.</title>
+  <meta name="description" content="TraceIt is a community-driven Lost &amp; Found Android app with live GPS location, real-time chat, and a photo-first feed — reuniting lost items with their owners.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Tracing line that runs through the whole page -->
+<!-- Signature dashed trace-line SVG -->
 <svg class="trace-line" id="traceLine" viewBox="0 0 1440 6000" preserveAspectRatio="none" aria-hidden="true">
-  <path id="tracePath" d="M -100 120 Q 400 200 720 280 T 1500 400" />
+  <path id="tracePath" d="" />
 </svg>
 
-<!-- NAV -->
+<!-- ═══════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════ -->
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a href="#top" class="brand">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 48 48" width="28" height="28">
-          <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="3"/>
-          <path d="M16 24c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="24" cy="24" r="2.5" fill="currentColor"/>
-        </svg>
+        <img src="assets/logo-square.jpg" alt="TraceIt Logo" class="brand-img">
       </span>
       TraceIt
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Site navigation">
       <a href="#demo">Demo</a>
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
+      <a href="#screens">Screens</a>
       <a href="#tech">Built with</a>
       <a href="#get">Get the app</a>
     </nav>
@@ -40,7 +40,9 @@
   </div>
 </header>
 
-<!-- HERO -->
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="hero-copy">
@@ -52,8 +54,8 @@
         or neighbourhood actually checks.
       </p>
       <div class="hero-actions">
-        <a href="#get" class="btn btn-primary">Get TraceIt — it's free</a>
-        <a href="#how" class="btn btn-text">See how it works ↓</a>
+        <a href="#get" class="btn btn-primary" id="hero-cta-primary">Get TraceIt — it's free</a>
+        <a href="#how" class="btn btn-text" id="hero-cta-text">See how it works ↓</a>
       </div>
       <div class="hero-stats">
         <div><strong>2-tap</strong><span>to report an item</span></div>
@@ -65,54 +67,23 @@
     <div class="hero-phones" aria-hidden="true">
       <div class="phone phone-back">
         <div class="phone-notch"></div>
-        <div class="screen screen-splash">
-          <div class="splash-logo">
-            <svg viewBox="0 0 48 48" width="36" height="36">
-              <circle cx="24" cy="24" r="22" fill="none" stroke="#fff" stroke-width="3"/>
-              <path d="M16 24c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="24" cy="24" r="2.5" fill="#fff"/>
-            </svg>
-          </div>
-          <p class="splash-name">TraceIt</p>
-          <p class="splash-tag">Trace your lost belongings</p>
+        <div class="screen">
+          <img src="screens/splash.jpg" alt="TraceIt splash screen" class="screen-img">
         </div>
       </div>
-
       <div class="phone phone-front">
         <div class="phone-notch"></div>
-        <div class="screen screen-home">
-          <div class="home-header">
-            <p class="home-greeting">Good Morning 👋</p>
-            <p class="home-name">Explorer</p>
-            <div class="home-search">Search items…</div>
-          </div>
-          <div class="home-filters">
-            <span class="chip chip-active">All</span>
-            <span class="chip">Lost</span>
-            <span class="chip">Found</span>
-          </div>
-          <p class="home-section-label">Recent items</p>
-          <div class="home-grid">
-            <div class="item-card">
-              <div class="item-thumb thumb-bag"></div>
-              <span class="tag tag-lost">Lost</span>
-              <p class="item-title">Blue Nike Backpack</p>
-              <p class="item-meta">📍 Main Library, Sector 7</p>
-            </div>
-            <div class="item-card">
-              <div class="item-thumb thumb-phone"></div>
-              <span class="tag tag-found">Found</span>
-              <p class="item-title">iPhone 14 Pro</p>
-              <p class="item-meta">📍 Central Cafeteria</p>
-            </div>
-          </div>
+        <div class="screen">
+          <img src="screens/home.jpg" alt="TraceIt home feed with live items" class="screen-img">
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DEMO VIDEO -->
+<!-- ═══════════════════════════════════════════
+     DEMO VIDEO
+═══════════════════════════════════════════ -->
 <section class="demo" id="demo">
   <div class="section-inner">
     <p class="eyebrow eyebrow-center">See it in action</p>
@@ -130,7 +101,9 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- ═══════════════════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════════════════ -->
 <section class="how" id="how">
   <div class="section-inner">
     <p class="eyebrow eyebrow-center">The journey of a lost item</p>
@@ -140,12 +113,13 @@
       <div class="journey-step">
         <div class="journey-icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/>
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
           </svg>
         </div>
         <h3>Open &amp; check</h3>
         <p>Browse the live feed first — maybe your item's already been posted as Found.</p>
       </div>
+
       <div class="journey-step">
         <div class="journey-icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -155,6 +129,7 @@
         <h3>Report it</h3>
         <p>Tap the <strong>+</strong> button. Add a photo, pick "I Lost It," and let GPS tag the spot.</p>
       </div>
+
       <div class="journey-step">
         <div class="journey-icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -164,6 +139,7 @@
         <h3>Get matched</h3>
         <p>Your post joins the community feed — searchable, filterable, visible to everyone nearby.</p>
       </div>
+
       <div class="journey-step">
         <div class="journey-icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -173,6 +149,7 @@
         <h3>Chat it out</h3>
         <p>Message the finder or owner directly. Verify details, agree on a place to meet.</p>
       </div>
+
       <div class="journey-step">
         <div class="journey-icon">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -186,7 +163,9 @@
   </div>
 </section>
 
-<!-- FEATURES -->
+<!-- ═══════════════════════════════════════════
+     FEATURES
+═══════════════════════════════════════════ -->
 <section class="features" id="features">
   <div class="section-inner">
     <p class="eyebrow eyebrow-center">What's inside</p>
@@ -196,7 +175,8 @@
       <article class="feature-card">
         <div class="feature-icon" style="--c:#4361EE">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </div>
         <h3>One-tap sign in</h3>
@@ -206,7 +186,8 @@
       <article class="feature-card">
         <div class="feature-icon" style="--c:#4CC9F0">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="11" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="18" width="7" height="3" rx="1"/>
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="11" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="18" width="7" height="3" rx="1"/>
           </svg>
         </div>
         <h3>Pinterest-style feed</h3>
@@ -224,7 +205,7 @@
       </article>
 
       <article class="feature-card">
-        <div class="feature-icon" style="--c:#4ADE80">
+        <div class="feature-icon" style="--c:#36C98F">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
           </svg>
@@ -240,13 +221,14 @@
           </svg>
         </div>
         <h3>Your profile, your wins</h3>
-        <p>Track Active Posts and a growing Resolved Items archive — proof your stuff (or someone else's) found its way home.</p>
+        <p>Track Active Posts and a growing Resolved Items archive — proof your stuff found its way home.</p>
       </article>
 
       <article class="feature-card">
         <div class="feature-icon" style="--c:#4CC9F0">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+            <path d="M21 15l-5-5L5 21"/>
           </svg>
         </div>
         <h3>Photo-first posts</h3>
@@ -256,7 +238,85 @@
   </div>
 </section>
 
-<!-- RESOLVED SHOWCASE -->
+<!-- ═══════════════════════════════════════════
+     SCREENS GALLERY
+═══════════════════════════════════════════ -->
+<section class="gallery" id="screens">
+  <div class="section-inner">
+    <p class="eyebrow eyebrow-center">Every screen, crafted</p>
+    <h2 class="gallery-heading">A tour through the app.</h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-phone">
+          <div class="gallery-notch"></div>
+          <img src="screens/splash.jpg" alt="TraceIt Splash Screen" class="gallery-screen-img">
+        </div>
+        <p class="gallery-caption">Splash</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-phone">
+          <div class="gallery-notch"></div>
+          <img src="screens/login.jpg" alt="Login Screen" class="gallery-screen-img">
+        </div>
+        <p class="gallery-caption">Login</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-phone">
+          <div class="gallery-notch"></div>
+          <img src="screens/signup.jpg" alt="Sign Up Screen" class="gallery-screen-img">
+        </div>
+        <p class="gallery-caption">Sign Up</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-phone">
+          <div class="gallery-notch"></div>
+          <img src="screens/home.jpg" alt="Home Feed with real photos" class="gallery-screen-img">
+        </div>
+        <p class="gallery-caption">Home Feed</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-phone">
+          <div class="gallery-notch"></div>
+          <img src="screens/home-empty.jpg" alt="Home Feed loading state" class="gallery-screen-img">
+        </div>
+        <p class="gallery-caption">Browse Items</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-phone">
+          <div class="gallery-notch"></div>
+          <img src="screens/profile-active.jpg" alt="My Active Posts" class="gallery-screen-img">
+        </div>
+        <p class="gallery-caption">My Posts</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-phone">
+          <div class="gallery-notch"></div>
+          <img src="screens/resolved.jpg" alt="Resolved Items tab" class="gallery-screen-img">
+        </div>
+        <p class="gallery-caption">Resolved</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-phone">
+          <div class="gallery-notch"></div>
+          <img src="screens/chat.png" alt="Real-time Chat" class="gallery-screen-img">
+        </div>
+        <p class="gallery-caption">Chat</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     RESOLVED SHOWCASE
+═══════════════════════════════════════════ -->
 <section class="showcase" id="showcase">
   <div class="section-inner showcase-inner">
     <div class="showcase-copy">
@@ -271,53 +331,61 @@
     <div class="showcase-phone">
       <div class="phone phone-solo">
         <div class="phone-notch"></div>
-        <div class="screen screen-profile">
-          <div class="profile-header">My Profile</div>
-          <div class="profile-tabs">
-            <span class="profile-tab profile-tab-active">My Active Posts</span>
-            <span class="profile-tab">Resolved Items</span>
-          </div>
-          <div class="resolved-card">
-            <div class="resolved-thumb">
-              <span class="resolved-badge">✓ Resolved</span>
-              <span class="tag tag-lost tag-small">Lost</span>
-            </div>
-            <p class="item-title">Black Umbrella</p>
-            <p class="item-meta">📍 Room 302 · Jun 05</p>
-          </div>
-          <div class="resolved-card">
-            <div class="resolved-thumb">
-              <span class="resolved-badge">✓ Resolved</span>
-              <span class="tag tag-found tag-small">Found</span>
-            </div>
-            <p class="item-title">Water Bottle</p>
-            <p class="item-meta">📍 Campus Gym · Jun 04</p>
-          </div>
+        <div class="screen">
+          <img src="screens/resolved.jpg" alt="Profile Resolved Items tab" class="screen-img">
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TECH STACK -->
+<!-- ═══════════════════════════════════════════
+     TECH STACK
+═══════════════════════════════════════════ -->
 <section class="tech" id="tech">
   <div class="section-inner">
     <p class="eyebrow eyebrow-center">Under the hood</p>
     <h2>Built natively. Backed by Firebase.</h2>
     <div class="tech-grid">
-      <div class="tech-item"><span class="tech-name">Java 11</span><span class="tech-desc">Native Android, API 26+</span></div>
-      <div class="tech-item"><span class="tech-name">Material 3</span><span class="tech-desc">ViewBinding · ConstraintLayout</span></div>
-      <div class="tech-item"><span class="tech-name">Firebase Auth</span><span class="tech-desc">Email + Google Sign-In</span></div>
-      <div class="tech-item"><span class="tech-name">Firestore</span><span class="tech-desc">Live feed &amp; chat sync</span></div>
-      <div class="tech-item"><span class="tech-name">Cloud Storage</span><span class="tech-desc">Item photos</span></div>
-      <div class="tech-item"><span class="tech-name">Google Play Services</span><span class="tech-desc">Location &amp; GPS tagging</span></div>
-      <div class="tech-item"><span class="tech-name">Glide</span><span class="tech-desc">Fast image loading</span></div>
-      <div class="tech-item"><span class="tech-name">Analytics</span><span class="tech-desc">Usage insights</span></div>
+      <div class="tech-item">
+        <span class="tech-name">Java 11</span>
+        <span class="tech-desc">Native Android, API 26+</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-name">Material 3</span>
+        <span class="tech-desc">ViewBinding · ConstraintLayout</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-name">Firebase Auth</span>
+        <span class="tech-desc">Email + Google Sign-In</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-name">Firestore</span>
+        <span class="tech-desc">Live feed &amp; chat sync</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-name">Cloud Storage</span>
+        <span class="tech-desc">Item photos</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-name">Google Play Services</span>
+        <span class="tech-desc">Location &amp; GPS tagging</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-name">Glide</span>
+        <span class="tech-desc">Fast image loading</span>
+      </div>
+      <div class="tech-item">
+        <span class="tech-name">Analytics</span>
+        <span class="tech-desc">Usage insights</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA / GET THE APP -->
+<!-- ═══════════════════════════════════════════
+     CTA / GET THE APP
+═══════════════════════════════════════════ -->
 <section class="cta" id="get">
   <div class="section-inner cta-inner">
     <p class="eyebrow eyebrow-center">Ready when you are</p>
@@ -327,22 +395,20 @@
       Clone it, run it, or just start tracing.
     </p>
     <div class="cta-actions">
-      <a href="https://github.com/Bylerma/Trace-t.git" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
-      <a href="#top" class="btn btn-text">Back to top ↑</a>
+      <a href="https://github.com/Bylerma/Trace-t.git" class="btn btn-primary" id="cta-github" target="_blank" rel="noopener">View on GitHub</a>
+      <a href="#top" class="btn btn-text" id="cta-back-top">Back to top ↑</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
 <footer class="footer">
   <div class="section-inner footer-inner">
     <a href="#top" class="brand brand-footer">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 48 48" width="22" height="22">
-          <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="3"/>
-          <path d="M16 24c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="24" cy="24" r="2.5" fill="currentColor"/>
-        </svg>
+        <img src="assets/logo-square.jpg" alt="TraceIt Logo" class="brand-img">
       </span>
       TraceIt
     </a>
